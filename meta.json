@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://json.cp3.es/minecraft/bedrock/manifest.v2.json",
+    "definitions": {
+        "version": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": [
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "number"
+                },
+                {
+                    "type": "number"
+                }
+            ],
+            "additionalItems": false
+        },
+        "uuid": {
+            "type": "string",
+            "format": "uuid",
+            "pattern": "[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}",
+            "default": "00000000-0000-0000-0000-000000000000"
+        }
+    }
+}
