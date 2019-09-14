@@ -5,6 +5,12 @@
                 "/manifest.json"
             ],
             "url": "https://json.cp3.es/minecraft/bedrock/manifest.json"
+        },
+        {
+            "fileMatch": [
+                "/*.animation_controllers.json"
+            ],
+            "url": "https://json.cp3.es/minecraft/bedrock/animation_controller.json"
         }
     ]
 }

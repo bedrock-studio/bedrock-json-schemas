@@ -1,0 +1,119 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://json.cp3.es/minecraft/bedrock/animation_controller.1.8.0.json",
+    "title": "Animation Controller",
+    "description": "An animation controller.",
+    "type": "object",
+    "properties": {
+        "format_version": {
+            "type": "string",
+            "const": "1.8.0"
+        },
+        "animation_controllers": {
+            "type": "object",
+            "propertyNames": {
+                "pattern": "^controller\\.animation\\.[A-z0-9._-]+$"
+            },
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "states": {
+                        "type": "object",
+                        "propertyNames": {
+                            "pattern": "^[A-z0-9._-]+$"
+                        },
+                        "additionalProperties": {
+                            "type": "object",
+                            "properties": {
+                                "parameters": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "animations": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "propertyNames": {
+                                            "pattern": "^[A-z0-9._-]+$"
+                                        },
+                                        "additionalProperties": {
+                                            "type": "array"
+                                        }
+                                    }
+                                },
+                                "transitions": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "propertyNames": {
+                                            "pattern": "^[A-z0-9._-]+$"
+                                        },
+                                        "additionalProperties": {
+                                            "type": "string",
+                                            "format": "molang"
+                                        }
+                                    }
+                                },
+                                "particle_effects": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "effect": {
+                                                "description": "The name of a particle effect that should be played",
+                                                "type": "string"
+                                            },
+                                            "locator": {
+                                                "description": "The name of a locator on the actor where the effect should be located",
+                                                "type": "string"
+                                            },
+                                            "pre_effect_script": {
+                                                "description": "A molang script that will be run when the particle emitter is initialized",
+                                                "type": "string"
+                                            },
+                                            "bind_to_actor": {
+                                                "description": "Set to false to have the effect spawned in the world without being bound to an actor (by default an effect is bound to the actor).",
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "required": [
+                                            "effect"
+                                        ],
+                                        "additionalProperties": false
+                                    },
+                                    "on_entry": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "on_exit": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    },
+                    "initial_state": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "states"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "required": [
+        "format_version",
+        "animation_controllers"
+    ],
+    "additionalProperties": false
+}
