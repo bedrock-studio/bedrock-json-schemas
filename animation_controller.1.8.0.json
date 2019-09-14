@@ -82,18 +82,18 @@
                                             "effect"
                                         ],
                                         "additionalProperties": false
-                                    },
-                                    "on_entry": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "on_exit": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        }
+                                    }
+                                },
+                                "on_entry": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "on_exit": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
                                     }
                                 }
                             },

@@ -131,35 +131,35 @@
                                             "effect"
                                         ],
                                         "additionalProperties": false
-                                    },
-                                    "on_entry": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "on_exit": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "sound_effects": {
-                                        "description": "Collection of sounds to trigger on entry to this animation state.",
-                                        "type": "array",
-                                        "items": {
-                                            "type": "object",
-                                            "properties": {
-                                                "effect": {
-                                                    "description": "Valid sound effect names should be listed in the entity's resource_definition json file.",
-                                                    "type": "string"
-                                                }
-                                            },
-                                            "required": [
-                                                "effect"
-                                            ],
-                                            "additionalProperties": false
-                                        }
+                                    }
+                                },
+                                "on_entry": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "on_exit": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "sound_effects": {
+                                    "description": "Collection of sounds to trigger on entry to this animation state.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "effect": {
+                                                "description": "Valid sound effect names should be listed in the entity's resource_definition json file.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "effect"
+                                        ],
+                                        "additionalProperties": false
                                     }
                                 }
                             },
