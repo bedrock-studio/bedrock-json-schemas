@@ -4,7 +4,7 @@
     "title": "Animation Controller",
     "description": "An animation controller.",
     "oneOf": [
-            { "$ref": "animation_controller.1.8.0.json" },
-            { "$ref": "animation_controller.1.10.0.json" }
+            { "$ref": "actor_animation_controller.1.8.0.json" },
+            { "$ref": "actor_animation_controller.1.10.0.json" }
     ]
 }

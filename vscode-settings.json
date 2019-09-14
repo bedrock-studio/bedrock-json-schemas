@@ -10,13 +10,13 @@
             "fileMatch": [
                 "/*.animation_controllers.json"
             ],
-            "url": "https://json.cp3.es/minecraft/bedrock/animation_controller.json"
+            "url": "https://json.cp3.es/minecraft/bedrock/actor_animation_controller.json"
         },
         {
             "fileMatch": [
                 "/*.animation.json"
             ],
-            "url": "https://json.cp3.es/minecraft/bedrock/animation.json"
+            "url": "https://json.cp3.es/minecraft/bedrock/actor_animation.json"
         }
     ]
 }
