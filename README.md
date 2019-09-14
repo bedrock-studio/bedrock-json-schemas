@@ -9,7 +9,7 @@ Current Status:
 - Manifest v2 ✔️
 - Actor Animation Controller v1.8.0 ✔️
 - Actor Animation Controller v1.10.0 ✔️
-- Actor Animations v1.8.0 🚫
+- Actor Animations v1.8.0 ✔️
 - Actor Resource Definition v1.8.0 🚫
 - Actor Resource Definition v1.10.0 🚫
 - Render Controller v1.8.0 🚫

@@ -11,6 +11,12 @@
                 "/*.animation_controllers.json"
             ],
             "url": "https://json.cp3.es/minecraft/bedrock/animation_controller.json"
+        },
+        {
+            "fileMatch": [
+                "/*.animation.json"
+            ],
+            "url": "https://json.cp3.es/minecraft/bedrock/animation.json"
         }
     ]
 }
