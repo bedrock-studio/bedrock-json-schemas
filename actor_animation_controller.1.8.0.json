@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://json.cp3.es/minecraft/bedrock/animation_controller.1.8.0.json",
+    "$id": "https://json.cp3.es/minecraft/bedrock/actor_animation_controller.1.8.0.json",
     "title": "Animation Controller",
     "description": "An animation controller.",
     "type": "object",
