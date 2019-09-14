@@ -108,29 +108,7 @@
                                 "particle_effects": {
                                     "type": "array",
                                     "items": {
-                                        "type": "object",
-                                        "properties": {
-                                            "effect": {
-                                                "description": "The name of a particle effect that should be played",
-                                                "type": "string"
-                                            },
-                                            "locator": {
-                                                "description": "The name of a locator on the actor where the effect should be located",
-                                                "type": "string"
-                                            },
-                                            "pre_effect_script": {
-                                                "description": "A molang script that will be run when the particle emitter is initialized",
-                                                "type": "string"
-                                            },
-                                            "bind_to_actor": {
-                                                "description": "Set to false to have the effect spawned in the world without being bound to an actor (by default an effect is bound to the actor).",
-                                                "type": "boolean"
-                                            }
-                                        },
-                                        "required": [
-                                            "effect"
-                                        ],
-                                        "additionalProperties": false
+                                        "$ref": "meta.json#/definitions/particle_effect"
                                     }
                                 },
                                 "on_entry": {
@@ -149,17 +127,7 @@
                                     "description": "Collection of sounds to trigger on entry to this animation state.",
                                     "type": "array",
                                     "items": {
-                                        "type": "object",
-                                        "properties": {
-                                            "effect": {
-                                                "description": "Valid sound effect names should be listed in the entity's resource_definition json file.",
-                                                "type": "string"
-                                            }
-                                        },
-                                        "required": [
-                                            "effect"
-                                        ],
-                                        "additionalProperties": false
+                                        "$ref": "meta.json#/definitions/sound_effect"
                                     }
                                 }
                             },
