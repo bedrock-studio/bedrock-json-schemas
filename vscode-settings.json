@@ -17,6 +17,18 @@
                 "/*.animation.json"
             ],
             "url": "https://json.cp3.es/minecraft/bedrock/actor_animation.json"
+        },
+        {
+            "fileMatch": [
+                "/*.entity.json"
+            ],
+            "url": "https://json.cp3.es/minecraft/bedrock/client_entity.actor_resource_definition.json"
+        },
+        {
+            "fileMatch": [
+                "/attachables/*.json"
+            ],
+            "url": "https://json.cp3.es/minecraft/bedrock/attachable.actor_resource_definition.json"
         }
     ]
 }
