@@ -35,6 +35,9 @@
                     "type": "number"
                 },
                 {
+                    "type": "boolean"
+                },
+                {
                     "type": "string"
                 }
             ]

@@ -29,6 +29,12 @@
                 "/attachables/*.json"
             ],
             "url": "https://json.cp3.es/minecraft/bedrock/attachable.actor_resource_definition.json"
+        },
+        {
+            "fileMatch": [
+                "/*.render_controllers.json"
+            ],
+            "url": "https://json.cp3.es/minecraft/bedrock/render_controller.json"
         }
     ]
 }

@@ -12,7 +12,7 @@ Current Status:
 - Actor Animations v1.8.0 ✔️
 - Actor Resource Definition v1.8.0 ✔️
 - Actor Resource Definition v1.10.0 ✔️
-- Render Controller v1.8.0 🚫
+- Render Controller v1.8.0 ✔️
 - Geometry v1.1.0 🚫
 - Geometry v1.8.0 🚫
 - Geometry v1.12.0 🚫
