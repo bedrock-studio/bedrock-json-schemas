@@ -35,6 +35,13 @@
                 "/*.render_controllers.json"
             ],
             "url": "https://json.cp3.es/minecraft/bedrock/render_controller.json"
+        },
+        {
+            "fileMatch": [
+                "/models/mobs.json",
+                "/*.geo.json"
+            ],
+            "url": "https://json.cp3.es/minecraft/bedrock/geometry.json"
         }
     ]
 }

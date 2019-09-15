@@ -13,9 +13,9 @@ Current Status:
 - Actor Resource Definition v1.8.0 ✔️
 - Actor Resource Definition v1.10.0 ✔️
 - Render Controller v1.8.0 ✔️
-- Geometry v1.1.0 🚫
-- Geometry v1.8.0 🚫
-- Geometry v1.12.0 🚫
+- Geometry v1.1.0 ✔️
+- Geometry v1.8.0 ✔️
+- Geometry v1.12.0 ✔️
 - Block Geometry v0.0.0? 🚫
 - Biome v1.12.0 🚫
 - Block v1.10.0 🚫

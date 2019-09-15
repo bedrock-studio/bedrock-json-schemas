@@ -1,0 +1,10 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://json.cp3.es/minecraft/bedrock/geometry.json",
+    "title": "Geometry",
+    "oneOf": [
+            { "$ref": "geometry.1.1.0.json" },
+            { "$ref": "geometry.1.8.0.json" },
+            { "$ref": "geometry.1.12.0.json" }
+    ]
+}
