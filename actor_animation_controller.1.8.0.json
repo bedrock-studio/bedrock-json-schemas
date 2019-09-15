@@ -35,11 +35,18 @@
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "propertyNames": {
-                                            "pattern": "^[A-z0-9._-]+$"
-                                        },
                                         "additionalProperties": {
-                                            "type": "array"
+                                            "type": "array",
+                                            "minItems": 0,
+                                            "items": {
+                                                "type": "object",
+                                                "propertyNames": {
+                                                    "pattern": "(\\.)?"
+                                                },
+                                                "additionalProperties": {
+                                                    "type": "number"
+                                                }
+                                            }
                                         }
                                     }
                                 },
@@ -47,12 +54,8 @@
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "propertyNames": {
-                                            "pattern": "^[A-z0-9._-]+$"
-                                        },
                                         "additionalProperties": {
-                                            "type": "string",
-                                            "format": "molang"
+                                            "$ref": "meta.json#/definitions/molang"
                                         }
                                     }
                                 },

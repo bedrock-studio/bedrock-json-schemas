@@ -34,8 +34,7 @@
                                         "type": "object",
                                         "properties": {
                                             "input": {
-                                                "type": "string",
-                                                "format": "molang"
+                                                "$ref": "meta.json#/definitions/molang"
                                             },
                                             "remap_curve": {
                                                 "type": "object",
@@ -62,12 +61,8 @@
                                             },
                                             {
                                                 "type": "object",
-                                                "propertyNames": {
-                                                    "pattern": "^[A-z0-9._-]+$"
-                                                },
                                                 "additionalProperties": {
-                                                    "type": "string",
-                                                    "format": "molang"
+                                                    "$ref": "meta.json#/definitions/molang"
                                                 }
                                             }
                                         ]
@@ -77,9 +72,6 @@
                                     "type": "array",
                                     "items": {
                                         "type": "object",
-                                        "propertyNames": {
-                                            "pattern": "^[A-z0-9._-]+$"
-                                        },
                                         "additionalProperties": {
                                             "type": "string"
                                         }

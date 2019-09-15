@@ -22,12 +22,10 @@
                     },
                     "anim_time_update": {
                         "description": "How does time pass when playing the animation.  Defaults to \"query.anim_time + query.delta_time\" which means advance in seconds.",
-                        "type": "string",
-                        "format": "molang"
+                        "$ref": "meta.json#/definitions/molang"
                     },
                     "blend_weight": {
-                        "type": "string",
-                        "format": "molang"
+                        "$ref": "meta.json#/definitions/molang"
                     },
                     "override_previous_animation": {
                         "description": "Reset bones in this animation to the default pose before applying this animation",
@@ -52,7 +50,7 @@
                                 "position": {
                                     "oneOf": [
                                         {
-                                            "$ref": "#/definitions/bone_transformation_molang"
+                                            "$ref": "meta.json#/definitions/molang"
                                         },
                                         {
                                             "$ref": "#/definitions/bone_transformation_object"
@@ -65,7 +63,7 @@
                                 "rotation": {
                                     "oneOf": [
                                         {
-                                            "$ref": "#/definitions/bone_transformation_molang"
+                                            "$ref": "meta.json#/definitions/molang"
                                         },
                                         {
                                             "$ref": "#/definitions/bone_transformation_object"
@@ -78,7 +76,7 @@
                                 "scale": {
                                     "oneOf": [
                                         {
-                                            "$ref": "#/definitions/bone_transformation_molang"
+                                            "$ref": "meta.json#/definitions/molang"
                                         },
                                         {
                                             "$ref": "#/definitions/bone_transformation_object"
@@ -167,23 +165,12 @@
     ],
     "additionalProperties": false,
     "definitions": {
-        "bone_transformation_molang": {
-            "anyOf": [
-                {
-                    "type": "string",
-                    "format": "molang"
-                },
-                {
-                    "type": "number"
-                }
-            ]
-        },
         "xyz_transform": {
             "type": "array",
             "minItems": 3,
             "maxItems": 3,
             "items": {
-                "$ref": "#/definitions/bone_transformation_molang"
+                "$ref": "meta.json#/definitions/molang"
             },
             "additionalItems": false
         },
@@ -219,7 +206,7 @@
         "bone_transformation_array": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/bone_transformation_molang"
+                "$ref": "meta.json#/definitions/molang"
             }
         },
         "bone_transformation_array_2": {
@@ -227,14 +214,19 @@
             "items": {
                 "anyOf": [
                     {
-                        "$ref": "#/definitions/bone_transformation_molang"
+                        "$ref": "meta.json#/definitions/molang"
                     },
                     {
                         "type": "object",
                         "properties": {
-                            "[xyz]": {
-                                "type": "string",
-                                "format": "molang"
+                            "x": {
+                                "$ref": "meta.json#/definitions/molang"
+                            },
+                            "y": {
+                                "$ref": "meta.json#/definitions/molang"
+                            },
+                            "z": {
+                                "$ref": "meta.json#/definitions/molang"
                             }
                         },
                         "required": [],
