@@ -32,7 +32,7 @@
                 },
                 "min_engine_version": {
                     "description": "This is the minimum version of the game that this pack was written for. This helps the game identify whether any backwards compatibility is needed for your pack. You should always use the highest version currently available when creating packs",
-                    "type": "string"
+                    "$ref": "meta.json#/definitions/version"
                 }
             },
             "required": [],
