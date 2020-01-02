@@ -11,6 +11,12 @@
                 "identifier": {
                     "type": "string"
                 },
+                "item": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "$ref": "meta.json#/definitions/molang"
+                    }
+                },
                 "min_engine_version": {
                     "$ref": "meta.json#/definitions/version_string"
                 },
