@@ -12,10 +12,17 @@
                     "type": "string"
                 },
                 "item": {
-                    "type": "object",
-                    "additionalProperties": {
-                        "$ref": "meta.json#/definitions/molang"
-                    }
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "meta.json#/definitions/molang"
+                            }
+                        }
+                    ]
                 },
                 "min_engine_version": {
                     "$ref": "meta.json#/definitions/version_string"
@@ -142,7 +149,17 @@
                 "render_controllers": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "$ref": "meta.json#/definitions/molang"
+                                }
+                            }
+                        ]
                     }
                 },
                 "sound_effects": {
