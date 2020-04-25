@@ -98,7 +98,8 @@
             "items": {
               "type": "string",
               "enum": ["experimental_custom_ui", "chemistry"]
-            }
+            },
+            "uniqueItems": true
         },
         "metadata": {
             "description": "This section contains additional data about your pack and is otherwise optional.",
