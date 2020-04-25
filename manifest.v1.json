@@ -33,6 +33,10 @@
                 "min_engine_version": {
                     "description": "This is the minimum version of the game that this pack was written for. This helps the game identify whether any backwards compatibility is needed for your pack. You should always use the highest version currently available when creating packs",
                     "$ref": "meta.json#/definitions/version"
+                },
+                "base_game_version": {
+                    "description": "This is the version of the base game your world template requires, specified as [majorVersion, minorVersion, revision].\nWe use this to determine what version of the base game resource and behavior packs to apply when your content is used.",
+                    "$ref": "meta.json#/definitions/version"
                 }
             },
             "required": [],
