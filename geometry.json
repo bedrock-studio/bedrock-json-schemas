@@ -5,6 +5,7 @@
     "oneOf": [
             { "$ref": "geometry.1.1.0.json" },
             { "$ref": "geometry.1.8.0.json" },
-            { "$ref": "geometry.1.12.0.json" }
+            { "$ref": "geometry.1.12.0.json" },
+            { "$ref": "geometry.1.14.0.json" }
     ]
 }
