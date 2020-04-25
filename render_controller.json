@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://json.cp3.es/minecraft/bedrock/render_controller.json",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/render_controller.json",
     "title": "Render Controller",
     "type": "object",
     "properties": {

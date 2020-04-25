@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://json.cp3.es/minecraft/bedrock/manifest.json",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/manifest.json",
     "title": "Manifest",
     "description": "The manifest for a Minecraft Bedrock Edition Add-On.",
     "oneOf": [

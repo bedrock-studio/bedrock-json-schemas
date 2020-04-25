@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://json.cp3.es/minecraft/bedrock/geometry.json",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/geometry.json",
     "title": "Geometry",
     "oneOf": [
             { "$ref": "geometry.1.1.0.json" },
