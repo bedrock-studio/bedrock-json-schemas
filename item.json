@@ -1,0 +1,225 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/item.json",
+    "title": "Item",
+    "type": "object",
+    "properties": {
+        "format_version": {
+            "type": "string",
+            "enum": [
+                "1.10",
+                "1.12.0"
+            ]
+        },
+        "minecraft:item": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "object",
+                    "properties": {
+                        "identifier": {
+                            "type": "string"
+                        },
+                        "category": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "identifier"
+                    ],
+                    "additionalProperties": false
+                },
+                "components": {
+                    "type": "object",
+                    "properties": {
+                        "minecraft:max_damage": {
+                            "description": "max damage item has, this is used like item max health.",
+                            "type": "integer"
+                        },
+                        "minecraft:hand_equipped": {
+                            "description": "is this a hand equipped item.",
+                            "type": "boolean"
+                        },
+                        "minecraft:stacked_by_data": {
+                            "description": "stacked by data aux value or not?",
+                            "type": "boolean"
+                        },
+                        "minecraft:foil": {
+                            "description": "foil or glint.",
+                            "type": "boolean"
+                        },
+                        "minecraft:block": {
+                            "description": "block name, leave blank for no block.",
+                            "type": "string"
+                        },
+                        "minecraft:max_stack_size": {
+                            "description": "max stack size.",
+                            "type": "integer"
+                        },
+                        "minecraft:use_duration": {
+                            "description": "how long to use before item is done being used.",
+                            "type": "integer"
+                        },
+                        "minecraft:food": {
+                            "type": "object",
+                            "properties": {
+                                "nutrition": {
+                                    "description": "nutrition amount.",
+                                    "type": "integer"
+                                },
+                                "saturation_modifier": {
+                                    "description": "choose: poor, low, normal, good, max, supernatural.",
+                                    "type": "string",
+                                    "enum": [
+                                        "poor",
+                                        "low",
+                                        "normal",
+                                        "good",
+                                        "max",
+                                        "supernatural"
+                                    ]
+                                },
+                                "using_converts_to": {
+                                    "description": "after using,  item converts it to this item.",
+                                    "type": "string"
+                                },
+                                "on_use_action": {
+                                    "description": "'chorus_teleport' or 'none'.",
+                                    "type": "string",
+                                    "enum": [
+                                        "chorus_teleport",
+                                        "none"
+                                    ]
+                                },
+                                "on_use_range": {
+                                    "description": "array of 3 ranges.",
+                                    "type": "array",
+                                    "minItems": 3,
+                                    "maxItems": 3,
+                                    "items": [
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "type": "number"
+                                        },
+                                        {
+                                            "type": "number"
+                                        }
+                                    ],
+                                    "additionalItems": false
+                                },
+                                "cooldown_type": {
+                                    "description": "'chorusfruit' or 'none'.",
+                                    "type": "string",
+                                    "enum": [
+                                        "chorusfruit",
+                                        "none"
+                                    ]
+                                },
+                                "cooldown_time": {
+                                    "description": "cooldown time in ticks.",
+                                    "type": "integer"
+                                },
+                                "can_always_eat": {
+                                    "description": "can always eat this item? true or false.",
+                                    "type": "boolean"
+                                },
+                                "effects": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "description": "name of effect: regeneration, absorption, resistance, fire_resistance",
+                                                "type": "string"
+                                            },
+                                            "chance": {
+                                                "description": "float chance for effect to happen ",
+                                                "type": "number"
+                                            },
+                                            "duration": {
+                                                "description": "int duration of effect ",
+                                                "type": "integer"
+                                            },
+                                            "amplifier": {
+                                                "description": "int amplifier",
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    }
+                                },
+                                "is_meat": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        "minecraft:seed": {
+                            "type": "object",
+                            "properties": {
+                                "crop_result": {
+                                    "description": "crop seed item result",
+                                    "type": "string"
+                                },
+                                "plant_at": {
+                                    "description": "valid blocks you can plant this item at.",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        "minecraft:camera": {
+                            "type": "object",
+                            "properties": {
+                                "black_bars_duration": {
+                                    "type": "number"
+                                },
+                                "black_bars_screen_ratio": {
+                                    "type": "number"
+                                },
+                                "shutter_duration": {
+                                    "type": "number"
+                                },
+                                "picture_duration": {
+                                    "type": "number"
+                                },
+                                "slide_away_duration": {
+                                    "type": "number"
+                                }
+                            },
+                            "additionalProperties": false
+                        },
+                        "minecraft:icon": {
+                            "type": "string"
+                        },
+                        "minecraft:use_animation": {
+                            "type": "string"
+                        },
+                        "minecraft:render_offsets": {
+                            "type": "string"
+                        },
+                        "minecraft:hover_text_color": {
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            },
+            "required": [
+                "description"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "format_version",
+        "minecraft:item"
+    ],
+    "additionalProperties": false,
+    "definitions": {}
+}
