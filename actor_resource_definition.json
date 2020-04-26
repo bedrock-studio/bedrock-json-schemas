@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/client_entity.actor_resource_definition.json",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_resource_definition.json",
     "title": "Attachable Resource",
     "description": "An attachable resource.",
     "oneOf": [
@@ -12,7 +12,10 @@
                     "const": "1.8.0"
                 },
                 "minecraft:client_entity": {
-                    "$ref": "actor_resource_definition.resource.1.8.0.json"
+                    "$ref": "actor_resource_definition.generic.1.8.0.json"
+                },
+                "minecraft:attachable": {
+                    "$ref": "actor_resource_definition.generic.1.8.0.json"
                 }
             },
             "required": [
@@ -29,7 +32,10 @@
                     "enum": ["1.10", "1.10.0"]
                 },
                 "minecraft:client_entity": {
-                    "$ref": "actor_resource_definition.resource.1.10.0.json"
+                    "$ref": "actor_resource_definition.client_entity.1.10.0.json"
+                },
+                "minecraft:attachable": {
+                    "$ref": "actor_resource_definition.attachable.1.10.0.json"
                 }
             },
             "required": [

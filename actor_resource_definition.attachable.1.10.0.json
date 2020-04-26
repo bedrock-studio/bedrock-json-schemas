@@ -1,0 +1,186 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_resource_definition.attachable.1.10.0.json",
+    "title": "Resource Definition",
+    "description": "An resource definition.",
+    "type": "object",
+    "properties": {
+        "description": {
+            "type": "object",
+            "properties": {
+                "identifier": {
+                    "type": "string"
+                },
+                "min_engine_version": {
+                    "$ref": "meta.json#/definitions/version_string"
+                },
+                "materials": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "textures": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "geometry": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "spawn_egg": {
+                    "type": "object",
+                    "properties": {
+                        "texture": {
+                            "type": "string"
+                        },
+                        "base_color": {
+                            "type": "string"
+                        },
+                        "overlay_color": {
+                            "type": "string"
+                        },
+                        "texture_index": {
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "scripts": {
+                    "type": "object",
+                    "properties": {
+                        "initialize": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "meta.json#/definitions/molang"
+                            }
+                        },
+                        "pre_animation": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "meta.json#/definitions/molang"
+                            }
+                        },
+                        "scale": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "scalex": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "scaleX": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "scaley": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "scaleY": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "scalez": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "scaleZ": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "parent_setup": {
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "animate": {
+                            "type": "array",
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "additionalProperties": {
+                                            "$ref": "meta.json#/definitions/molang"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "should_update_bones_and_effects_offscreen": {
+                            "description": "Bones and effects will still be updated if the entity is off screen if this expression returns anything other than 0.0.",
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "should_update_effects_offscreen": {
+                            "description": "Effects will still be updated if the entity is off screen if this expression or `should_update_bones_and_effects_offscreen` returns anything other than 0.0.",
+                            "$ref": "meta.json#/definitions/molang"
+                        }
+                    },
+                    "additionalProperties": false
+                },
+                "particle_effects": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "particle_emitters": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "animations": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "render_controllers": {
+                    "type": "array",
+                    "items": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "$ref": "meta.json#/definitions/molang"
+                                }
+                            }
+                        ]
+                    }
+                },
+                "sound_effects": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "enable_attachables": {
+                    "type": "boolean"
+                },
+                "item": {
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "object",
+                            "additionalProperties": {
+                                "$ref": "meta.json#/definitions/molang"
+                            }
+                        }
+                    ]
+                }
+            },
+            "required": [
+                "identifier"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "required": [
+        "description"
+    ],
+    "additionalProperties": false
+}

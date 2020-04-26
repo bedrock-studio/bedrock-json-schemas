@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_resource_definition.resource.1.8.0.json",
+    "$id": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_resource_definition.client_entity.1.10.0.json",
     "title": "Resource Definition",
     "description": "An resource definition.",
     "type": "object",
@@ -47,11 +47,18 @@
                         "texture_index": {
                             "type": "integer"
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 },
                 "scripts": {
                     "type": "object",
                     "properties": {
+                        "initialize": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "meta.json#/definitions/molang"
+                            }
+                        },
                         "pre_animation": {
                             "type": "array",
                             "items": {
@@ -81,8 +88,33 @@
                         },
                         "parent_setup": {
                             "$ref": "meta.json#/definitions/molang"
+                        },
+                        "animate": {
+                            "type": "array",
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "object",
+                                        "additionalProperties": {
+                                            "$ref": "meta.json#/definitions/molang"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "should_update_bones_and_effects_offscreen": {
+                            "description": "Bones and effects will still be updated if the entity is off screen if this expression returns anything other than 0.0.",
+                            "$ref": "meta.json#/definitions/molang"
+                        },
+                        "should_update_effects_offscreen": {
+                            "description": "Effects will still be updated if the entity is off screen if this expression or `should_update_bones_and_effects_offscreen` returns anything other than 0.0.",
+                            "$ref": "meta.json#/definitions/molang"
                         }
-                    }
+                    },
+                    "additionalProperties": false
                 },
                 "particle_effects": {
                     "type": "object",
@@ -102,19 +134,20 @@
                         "type": "string"
                     }
                 },
-                "animation_controllers": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "additionalProperties": {
-                            "type": "string"
-                        }
-                    }
-                },
                 "render_controllers": {
                     "type": "array",
                     "items": {
-                        "type": "string"
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "object",
+                                "additionalProperties": {
+                                    "$ref": "meta.json#/definitions/molang"
+                                }
+                            }
+                        ]
                     }
                 },
                 "sound_effects": {
@@ -128,8 +161,7 @@
                 }
             },
             "required": [
-                "identifier",
-                "geometry"
+                "identifier"
             ],
             "additionalProperties": false
         }
