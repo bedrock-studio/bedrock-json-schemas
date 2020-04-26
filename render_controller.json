@@ -96,42 +96,16 @@
                         }
                     },
                     "color": {
-                        "type": "object",
-                        "properties": {
-                            "r": {
-                                "$ref": "meta.json#/definitions/molang"
-                            },
-                            "g": {
-                                "$ref": "meta.json#/definitions/molang"
-                            },
-                            "b": {
-                                "$ref": "meta.json#/definitions/molang"
-                            },
-                            "a": {
-                                "$ref": "meta.json#/definitions/molang"
-                            }
-                        },
-                        "required": [],
-                        "additionalProperties": false
+                        "$ref": "#/definitions/color"
                     },
                     "overlay_color": {
-                        "type": "object",
-                        "properties": {
-                            "r": {
-                                "$ref": "meta.json#/definitions/molang"
-                            },
-                            "g": {
-                                "$ref": "meta.json#/definitions/molang"
-                            },
-                            "b": {
-                                "$ref": "meta.json#/definitions/molang"
-                            },
-                            "a": {
-                                "$ref": "meta.json#/definitions/molang"
-                            }
-                        },
-                        "required": [],
-                        "additionalProperties": false
+                        "$ref": "#/definitions/color"
+                    },
+                    "on_fire_color": {
+                        "$ref": "#/definitions/color"
+                    },
+                    "is_hurt_color": {
+                        "$ref": "#/definitions/color"
                     },
                     "uv_anim": {
                         "type": "object",
@@ -153,7 +127,8 @@
                                     "$ref": "meta.json#/definitions/molang"
                                 },
                                 "additionalItems": false
-                            }
+                            },
+                            "additionalProperties": false
                         },
                         "required": [
                             "offset",
@@ -182,5 +157,26 @@
         "format_version",
         "render_controllers"
     ],
-    "additionalProperties": false
+    "additionalProperties": false,
+    "definitions": {
+        "color": {
+            "type": "object",
+            "properties": {
+                "r": {
+                    "$ref": "meta.json#/definitions/molang"
+                },
+                "g": {
+                    "$ref": "meta.json#/definitions/molang"
+                },
+                "b": {
+                    "$ref": "meta.json#/definitions/molang"
+                },
+                "a": {
+                    "$ref": "meta.json#/definitions/molang"
+                }
+            },
+            "required": [],
+            "additionalProperties": false
+        }
+    }
 }
