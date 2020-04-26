@@ -6,7 +6,7 @@
     "properties": {
         "format_version": {
             "type": "string",
-            "const": "1.12.0"
+            "enum": ["1.12.0", "1.14.0"]
         },
         "minecraft:geometry": {
             "type": "array",
@@ -78,6 +78,9 @@
                         ],
                         "additionalProperties": false
                     },
+                    "cape": {
+                        "type": "string"
+                    },
                     "bones": {
                         "description": "Bones define the 'skeleton' of the mob: the parts that can be animated, and to which geometry and other bones are attached.",
                         "type": "array",
@@ -119,6 +122,9 @@
                                 },
                                 "debug": {
                                     "type": "boolean"
+                                },
+                                "render_group_id": {
+                                    "type": "integer"
                                 },
                                 "cubes": {
                                     "description": "This is the list of cubes associated with this bone.",
@@ -196,8 +202,30 @@
                                     "description": "This is a list of locators associated with this bone.  A locator is a point in model space that tracks a particular bone as the bone animates (by maintaining it's relationship to the bone through the animation).",
                                     "type": "object",
                                     "additionalProperties": {
-                                        "description": "Position of the locator in model space.",
-                                        "$ref": "meta.json#/definitions/coordinates_3d"
+                                        "oneOf": [
+                                            {
+                                                "type": "object",
+                                                "properties": {
+                                                    "offset": {
+                                                        "description": "Position of the locator in model space.",
+                                                        "$ref": "meta.json#/definitions/coordinates_3d"
+                                                    },
+                                                    "rotation": {
+                                                        "description": "Rotation of the locator in model space.",
+                                                        "$ref": "meta.json#/definitions/coordinates_3d"
+                                                    },
+                                                    "ignore_inherited_scale": {
+                                                        "description": "Discard scale inherited from parent bone.",
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "additionalProperties": false
+                                            },
+                                            {
+                                                "description": "Position of the locator in model space.",
+                                                "$ref": "meta.json#/definitions/coordinates_3d"
+                                            }
+                                        ]
                                     }
                                 },
                                 "poly_mesh": {

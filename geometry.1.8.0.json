@@ -6,7 +6,10 @@
     "properties": {
         "format_version": {
             "type": "string",
-            "enum": ["1.8.0", "1.10.0"]
+            "enum": [
+                "1.8.0",
+                "1.10.0"
+            ]
         }
     },
     "required": [
@@ -37,6 +40,9 @@
             "textureheight": {
                 "description": "Assumed height in texels of the texture that will be bound to this geometry.",
                 "type": "number"
+            },
+            "cape": {
+                "type": "string"
             },
             "preserve_model_pose": {
                 "type": "boolean"
@@ -113,6 +119,9 @@
                         "debug": {
                             "type": "boolean"
                         },
+                        "render_group_id": {
+                            "type": "integer"
+                        },
                         "cubes": {
                             "description": "This is the list of cubes associated with this bone.",
                             "type": "array",
@@ -161,15 +170,24 @@
                                 },
                                 "positions": {
                                     "description": "Vertex positions for the mesh.  Can be either indexed via the \"polys\" section, or be a quad-list if mapped 1-to-1 to the normals and UVs sections.",
-                                    "$ref": "meta.json#/definitions/coordinates_3d"
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "meta.json#/definitions/coordinates_3d"
+                                    }
                                 },
                                 "normals": {
                                     "description": "Vertex normals.  Can be either indexed via the \"polys\" section, or be a quad-list if mapped 1-to-1 to the positions and UVs sections.",
-                                    "$ref": "meta.json#/definitions/coordinates_3d"
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "meta.json#/definitions/coordinates_3d"
+                                    }
                                 },
                                 "uvs": {
                                     "description": "Vertex UVs.  Can be either indexed via the \"polys\" section, or be a quad-list if mapped 1-to-1 to the positions and normals sections.",
-                                    "$ref": "meta.json#/definitions/coordinates_2d"
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "meta.json#/definitions/coordinates_2d"
+                                    }
                                 },
                                 "polys": {
                                     "oneOf": [
