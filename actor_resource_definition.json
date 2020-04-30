@@ -19,8 +19,7 @@
                 }
             },
             "required": [
-                "format_version",
-                "minecraft:client_entity"
+                "format_version"
             ],
             "additionalProperties": false
         },
@@ -39,8 +38,7 @@
                 }
             },
             "required": [
-                "format_version",
-                "minecraft:client_entity"
+                "format_version"
             ],
             "additionalProperties": false
         }

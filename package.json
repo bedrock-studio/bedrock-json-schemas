@@ -1,5 +1,5 @@
 {
-  "name": "minecraft-bedrock-addon-schemas",
+  "name": "bedrock-json-schemas",
   "version": "1.0.0",
   "description": "Schemas for Minecraft: Bedrock Edition addons.",
   "scripts": {
@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Tschrock/minecraft-bedrock-addon-schemas.git"
+    "url": "git+https://github.com/bedrock-studio/bedrock-json-schemas.git"
   },
   "keywords": [
     "minecraft",
@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Tschrock/minecraft-bedrock-addon-schemas/issues"
+    "url": "https://github.com/bedrock-studio/bedrock-json-schemas/issues"
   },
-  "homepage": "https://github.com/Tschrock/minecraft-bedrock-addon-schemas#readme"
+  "homepage": "https://github.com/bedrock-studio/bedrock-json-schemas#readme"
 }
