@@ -10,25 +10,25 @@
             "fileMatch": [
                 "/*.animation_controllers.json"
             ],
-            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_animation_controller.json"
+            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/animation_controller.json"
         },
         {
             "fileMatch": [
                 "/*.animation.json"
             ],
-            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_animation.json"
+            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/animation.json"
         },
         {
             "fileMatch": [
                 "/*.entity.json"
             ],
-            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/client_entity.actor_resource_definition.json"
+            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_resource_definition.json"
         },
         {
             "fileMatch": [
                 "/attachables/*.json"
             ],
-            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/attachable.actor_resource_definition.json"
+            "url": "https://bedrock-studio.github.io/bedrock-json-schemas/actor_resource_definition.json"
         },
         {
             "fileMatch": [
