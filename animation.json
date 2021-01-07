@@ -179,8 +179,7 @@
             "maxItems": 3,
             "items": {
                 "$ref": "meta.json#/definitions/molang"
-            },
-            "additionalItems": false
+            }
         },
         "bone_transformation_object": {
             "type": "object",

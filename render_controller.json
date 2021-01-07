@@ -116,8 +116,7 @@
                                 "maxItems": 2,
                                 "items": {
                                     "$ref": "meta.json#/definitions/molang"
-                                },
-                                "additionalItems": false
+                                }
                             },
                             "scale": {
                                 "type": "array",
@@ -125,8 +124,7 @@
                                 "maxItems": 2,
                                 "items": {
                                     "$ref": "meta.json#/definitions/molang"
-                                },
-                                "additionalItems": false
+                                }
                             },
                             "additionalProperties": false
                         },
