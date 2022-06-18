@@ -6,17 +6,9 @@
             "type": "array",
             "minItems": 3,
             "maxItems": 3,
-            "items": [
-                {
-                    "type": "number"
-                },
-                {
-                    "type": "number"
-                },
-                {
-                    "type": "number"
-                }
-            ],
+            "items": {
+                "type": "number"
+            },
             "additionalItems": false
         },
         "version_string": {
@@ -57,9 +49,9 @@
                 "type": "number"
             }
         },
-        "sound_effect":{
+        "sound_effect": {
             "description": "Valid sound effect names should be listed in the entity's resource_definition json file.",
-            "type":"object",
+            "type": "object",
             "properties": {
                 "effect": {
                     "type": "string"
