@@ -53,6 +53,13 @@
                 "scripts": {
                     "type": "object",
                     "properties": {
+                        "variables": {
+                            "type": "object",
+                            "additionalProperties": {
+                                "type": "string",
+                                "const": "public"
+                            }
+                        },
                         "initialize": {
                             "type": "array",
                             "items": {

@@ -8,8 +8,7 @@
             "maxItems": 3,
             "items": {
                 "type": "number"
-            },
-            "additionalItems": false
+            }
         },
         "version_string": {
             "type": "string",
